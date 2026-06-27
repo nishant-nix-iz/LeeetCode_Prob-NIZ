@@ -4,15 +4,8 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        low, high = 0, x
-        ans = 0
+        r = x
+        while r * r >x:
+            r = (r + x // r) // 2
 
-        while low <= high:
-            mid = (low + high) // 2
-            if mid * mid <= x:
-                ans = mid
-                low = mid + 1
-            else:
-                high = mid - 1
-
-        return ans
+        return r
