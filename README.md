@@ -46,4 +46,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/nishant-nix-iz/LeeetCode_Prob-NIZ/tree/master/0004-median-of-two-sorted-arrays) |
+## Database
+|  |
+| ------- |
+| [0175-combine-two-tables](https://github.com/nishant-nix-iz/LeeetCode_Prob-NIZ/tree/master/0175-combine-two-tables) |
 <!---LeetCode Topics End-->
