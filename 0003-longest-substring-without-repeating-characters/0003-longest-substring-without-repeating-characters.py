@@ -1,26 +1,18 @@
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution(object):
-    def addTwoNumbers(self, l1, l2):
-       dummy = ListNode(0)
-       current = dummy
-       carry = 0
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        char_map = {}
+        left = 0
+        max_length = 0
+        
+        for right in range(len(s)):
+            if s[right] in char_map and char_map[s[right]] >= left:
+                left = char_map[s[right]] + 1
 
-       while l1 or l2 or carry:
-            val1 = l1.val if l1 else 0
-            val2 = l2.val if l2 else 0
-
-            total = val1 + val2 + carry
-            carry = total // 10
-            digit = total % 10
-
-            current.next = ListNode(digit)
-            current = current.next
-
-            if l1: l1= l1.next
-            if l2: l2= l2.next
-
-       return dummy.next
+            char_map[s[right]] = right
+            max_length = max(max_length, right - left + 1)
+            
+        return max_length
